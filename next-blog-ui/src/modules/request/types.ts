@@ -1,6 +1,8 @@
+import { createTypes } from "@next/store/utils";
+
 export interface RequestState {
-  start: GenericObject;
-  success: GenericObject;
-  error: GenericObject;
+  requestSuccess: GenericObject | undefined;
+  requestError: Error | undefined;
+  requestStart: boolean;
 }
 export type GenericObject = { [key: string]: any };
