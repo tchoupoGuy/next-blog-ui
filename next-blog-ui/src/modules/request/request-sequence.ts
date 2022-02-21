@@ -7,18 +7,18 @@ export function* requestSequence<Fn extends (...args: any[]) => Promise<any>>(
   requestFn: Fn,
   ...args: Parameters<Fn>
 ) {
-  let action: GenericObject = {};
+  // let action: GenericObject = {};
   try {
     // Send a REQUEST_START action to notify other sagas or reducers
-    yield put(requestNextActions.start(action));
+    // yield put(requestNextActions.start(action));
     // Perform the request
-    const result: GenericObject = yield call(requestFn, ...args);
+    const response: GenericObject = yield call(requestFn, ...args);
     // Dispatch a REQUEST_SUCCESS action and also return it
-    action = yield put(requestNextActions.success(result)) as GenericObject;
-    return action;
-  } catch (err: any) {
+    // action = yield put(requestNextActions.success(result)) as GenericObject;
+    return { response };
+  } catch (error: any) {
     // Dispatch a REQUEST_ERROR action and return it
-    action = yield put(requestNextActions.error(err));
-    return action;
+    // action = yield put(requestNextActions.error(err));
+    return { error };
   }
 }

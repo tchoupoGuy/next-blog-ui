@@ -1,6 +1,7 @@
 import { all, call, spawn } from "redux-saga/effects";
+import { watchHandleSignInRequest } from "@next/modules/authentication/sagas";
 
-const sagas: any[] = [];
+const sagas: any[] = [watchHandleSignInRequest];
 
 // https://redux-saga.js.org/docs/advanced/RootSaga.html
 export default function* rootSaga() {
