@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { Button as AntButton } from "antd";
-import cn from "classnames";
+// import cn from "classnames";
 
 interface ButtonProps {
   children?: ReactNode;
@@ -32,9 +32,10 @@ export default function Button({
   return (
     <AntButton
       icon={icon}
-      className={cn(className, {
-        "border-none": !!icon,
-      })}
+      // className={cn(className, {
+      //   "border-none": !!icon,
+      // })}
+      className={className}
       htmlType={htmlType}
       block={fullWidth}
       loading={loading}

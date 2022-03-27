@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import * as yup from "yup";
+import TextInput from "../input/text";
 
 export type FormSchema<T> = yup.Schema<T | undefined>;
 
@@ -36,7 +37,7 @@ export default function Form<T = any>({
   className,
   displayFeedback = true,
 }: FormProps<T>) {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const { control, handleSubmit, formState } = useForm({
     mode,
@@ -54,8 +55,8 @@ export default function Form<T = any>({
     [dirtyFields, isSubmitted]
   );
 
-  const parseChildren = (children: ReactNode, recursionLevel = 0): any[] =>
-    React.Children.map(children, (child: any) => {
+  const parseChildren = (children: ReactNode, recursionLevel = 0): any[] => {
+    return React.Children.map(children, (child: any) => {
       const { type, props } = child;
       const { name, children } = props || {};
 
@@ -67,9 +68,10 @@ export default function Form<T = any>({
         });
       }
 
-      // Share the `isSubmitting` status with the bubmit button
+      // Share the `isSubmitting` status with the submit button
       // eslint-disable-next-line react/prop-types
       if (type === Button && props.htmlType === "submit") {
+        console.log(type, "type");
         return React.cloneElement(child, {
           loading: isSubmitting,
           ...props,
@@ -85,10 +87,12 @@ export default function Form<T = any>({
         return (
           <Controller
             validationStatus={getValidationStatus(name, hasError)}
-            helpText={hasError && isSubmitted ? t(message) : undefined}
+            name={name}
+            helpText={hasError && isSubmitted ? message : undefined}
             hasFeedback={displayFeedback && isDirty}
             as={type}
             control={control}
+            render={({ field }) => <TextInput {...field} />}
             {...props}
             //defaultValue={(defaultValues as any)?.[name]}
             initialValue={(defaultValues as any)?.[name]}
@@ -98,6 +102,7 @@ export default function Form<T = any>({
 
       return child;
     }) as any[];
+  };
 
   return (
     <form
