@@ -14,6 +14,26 @@
 
     .navLink {
       margin-left: 8px;
+      font-weight: bold;
     }
+  }
+
+  &__content {
+    padding: 0 32px;
+    margin-top: 54px;
+
+    .childrenContainer {
+      padding: 24px;
+      background: yellow;
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0%;
+    padding: 16px;
+    background: #fafafa;
   }
 }

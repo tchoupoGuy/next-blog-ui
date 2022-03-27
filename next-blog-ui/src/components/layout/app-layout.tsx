@@ -5,11 +5,12 @@ import { useRouter } from "next/router";
 import { Layout, Avatar, PageHeader, Menu } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { Route } from "@next/constants/routes";
+import ActiveLink from "../active-link";
 
 const { Header, Content, Footer } = Layout;
 interface AppLayoutProps {}
 
-const routeFeed = [Route.HOME.toString()];
+const routeHome = [Route.HOME.toString()];
 
 const navRoutes = [
   {
@@ -41,56 +42,26 @@ const navRoutes = [
 const AppLayout: React.FC<PropsWithChildren<AppLayoutProps>> = ({
   children,
 }) => {
+  const router = useRouter();
   return (
-    <Layout
-    // className={styles.cAppLayout}
-    >
-      <Header
-        // className={styles.cAppLayout__header}
-        style={{
-          position: "fixed",
-          top: "0%",
-          zIndex: 1,
-          width: "100%",
-          background: "#f5f5f5",
-          padding: 24,
-          display: "flex",
-        }}
-      >
-        <div style={{ flexGrow: 1 }}>
+    <Layout className={styles.cAppLayout}>
+      <Header className={styles.cAppLayout__header}>
+        <div className={styles.avatarContainer}>
           <Avatar>GT</Avatar>
         </div>
         {navRoutes.map((nav) => {
           return (
-            <a style={{ marginLeft: 8 }} key={nav.path} href={nav.path}>
+            <ActiveLink key={nav.path} href={nav.path}>
               {nav.name}
-            </a>
+            </ActiveLink>
           );
         })}
       </Header>
-      <Content
-        className="site-layout"
-        style={{ padding: "0 50px", marginTop: 64 }}
-      >
-        <div
-          className="site-layout-background"
-          style={{ padding: 24, minHeight: 380 }}
-        >
-          {children}
-        </div>
+
+      <Content className={styles.cAppLayout__content}>
+        <div className={styles.childrenContainer}>{children}</div>
       </Content>
-      <Footer
-        style={{
-          width: "100%",
-          textAlign: "center",
-          position: "fixed",
-          bottom: "0%",
-          padding: 16,
-          background: "#fafafa",
-        }}
-      >
-        Guy Tchoupo ©2022
-      </Footer>
+      <Footer className={styles.cAppLayout__footer}>Guy Tchoupo ©2022</Footer>
     </Layout>
   );
 };

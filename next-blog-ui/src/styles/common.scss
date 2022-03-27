@@ -1,0 +1,88 @@
+#root {
+  height: 100%;
+  min-height: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "sans-serif";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: "#ffffff";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin-left: 1em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+// Turn off HTML5 spinner for input fields with type number
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a {
+  color: #1e76e3;
+}
+
+a:hover {
+  color: #1e76e3;
+  text-decoration: underline;
+}
+
+.modalcontainer {
+  max-height: 400px;
+  overflow: scroll;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.c-cursor-pointer {
+  cursor: pointer;
+}
+
+// override overflow hidden on body when chat dialog opens
+body.c-page-scroll {
+  overflow-y: auto !important;
+}
+
+.c-submit-action-button {
+  box-shadow: none !important;
+}
+
+.DraftEditor-editorContainer {
+  a,
+  a:hover {
+    color: #1e76e3;
+  }
+}
