@@ -1,38 +1,31 @@
+import styles from "./home.module.scss";
 import React from "react";
+import Image from "next/image";
 
 import { Typography } from "antd";
+import profilePicture from "@next/assets/img/picture-profile.jpg";
 
 const HomePage: React.FC = () => {
   return (
     <>
-      <section
-        style={{
-          display: "flex",
-          alignItems: "center",
-          padding: "15%  10%",
-          justifyContent: "space-between",
-        }}
-      >
-        <div
-        // style={{ padding: "25% 10%" }}
-        >
-          <Typography.Title level={5} style={{ padding: 8, color: "blue" }}>
+      <section className={styles.cHomePage}>
+        <div className={styles.cHomePage__textContainer}>
+          <Typography.Title level={5} className={styles.helloContainer}>
             Hello I am
           </Typography.Title>
-          <Typography.Title
-            style={{ padding: 8, fontWeight: "bold", fontSize: 40 }}
-          >
+          <Typography.Title className={styles.nameContainer}>
             Guy Tchoupo
           </Typography.Title>
-          <Typography.Title level={4} style={{ padding: 8, color: "GrayText" }}>
+          <Typography.Title level={4} className={styles.jobPositionContainer}>
             Frontend developer
           </Typography.Title>
         </div>
-        <div>
-          <img
-            src="https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp"
-            alt="profile-image"
-            style={{ width: 300, height: 300, borderRadius: "50%" }}
+        <div className={styles.cHomePage__imgContainer}>
+          <Image
+            src={profilePicture}
+            width={300}
+            height={300}
+            className={styles.profilePicture}
           />
         </div>
       </section>

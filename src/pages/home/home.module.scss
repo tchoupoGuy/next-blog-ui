@@ -1,0 +1,28 @@
+.cHomePage {
+  display: flex;
+  align-items: center;
+  padding: 15% 10%;
+  justify-content: space-between;
+
+  &__textContainer {
+    .helloContainer {
+      padding: 8px;
+      color: blue;
+    }
+    .nameContainer {
+      padding: 8px;
+      font-weight: bold;
+      font-size: 56px;
+    }
+    .jobPositionContainer {
+      padding: 8px;
+      color: grey;
+    }
+  }
+
+  &__imgContainer {
+    .profilePicture {
+      border-radius: 50%;
+    }
+  }
+}
