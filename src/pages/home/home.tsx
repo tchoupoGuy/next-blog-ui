@@ -1,33 +1,42 @@
 import React from "react";
-import { Layout, Menu, Breadcrumb } from "antd";
 
-const { Header, Content, Footer } = Layout;
+import { Typography } from "antd";
 
 const HomePage: React.FC = () => {
   return (
-    <Layout>
-      <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-          <Menu.Item key="1">nav 1</Menu.Item>
-          <Menu.Item key="2">nav 2</Menu.Item>
-          <Menu.Item key="3">nav 3</Menu.Item>
-        </Menu>
-      </Header>
-      <Content
-        className="site-layout"
-        style={{ padding: "0 50px", marginTop: 64 }}
+    <>
+      <section
+        style={{
+          display: "flex",
+          alignItems: "center",
+          padding: "15%  10%",
+          justifyContent: "space-between",
+        }}
       >
         <div
-          className="site-layout-background"
-          style={{ padding: 24, minHeight: 380 }}
+        // style={{ padding: "25% 10%" }}
         >
-          Content
+          <Typography.Title level={5} style={{ padding: 8, color: "blue" }}>
+            Hello I am
+          </Typography.Title>
+          <Typography.Title
+            style={{ padding: 8, fontWeight: "bold", fontSize: 40 }}
+          >
+            Guy Tchoupo
+          </Typography.Title>
+          <Typography.Title level={4} style={{ padding: 8, color: "GrayText" }}>
+            Frontend developer
+          </Typography.Title>
         </div>
-      </Content>
-      <Footer style={{ textAlign: "center" }}>
-        Ant Design ©2018 Created by Ant UED
-      </Footer>
-    </Layout>
+        <div>
+          <img
+            src="https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp"
+            alt="profile-image"
+            style={{ width: 300, height: 300, borderRadius: "50%" }}
+          />
+        </div>
+      </section>
+    </>
   );
 };
 
