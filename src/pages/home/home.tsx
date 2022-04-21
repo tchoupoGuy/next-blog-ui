@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 import { Typography } from "antd";
-import profilePicture from "@next/assets/img/picture-profile.jpg";
+import profilePicture from "@next/public/assets/img/profile-picture-two.jpg";
 
 const HomePage: React.FC = () => {
   return (
@@ -23,8 +23,8 @@ const HomePage: React.FC = () => {
         <div className={styles.cHomePage__imgContainer}>
           <Image
             src={profilePicture}
-            width={300}
-            height={300}
+            width={500}
+            height={500}
             className={styles.profilePicture}
           />
         </div>
