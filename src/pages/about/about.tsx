@@ -1,7 +1,13 @@
+import PageTitle from "@next/components/page-title";
 import React from "react";
 
 const About: React.FC = () => {
-  return <div>About</div>;
+  return (
+    <section>
+      {" "}
+      <PageTitle title="About" />
+    </section>
+  );
 };
 
 export default About;

@@ -10,6 +10,9 @@
 
     .avatarContainer {
       flex-grow: 1;
+      &__img {
+        border-radius: 50%;
+      }
     }
 
     .navLink {

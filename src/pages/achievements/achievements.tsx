@@ -1,7 +1,13 @@
+import PageTitle from "@next/components/page-title";
 import React from "react";
 
 const Achievements: React.FC = () => {
-  return <div>Achievements</div>;
+  return (
+    <section>
+      {" "}
+      <PageTitle title="Achievements" />
+    </section>
+  );
 };
 
 export default Achievements;

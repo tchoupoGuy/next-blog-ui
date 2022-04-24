@@ -1,43 +1,16 @@
 import styles from "./app-layout.module.scss";
 
 import React, { PropsWithChildren } from "react";
+import { Layout } from "antd";
 import { useRouter } from "next/router";
-import { Layout, Avatar, PageHeader, Menu } from "antd";
-import { UserOutlined } from "@ant-design/icons";
-import { Route } from "@next/constants/routes";
+import Image from "next/image";
+
+import headIcon from "@next/public/head-icon.png";
 import ActiveLink from "../active-link";
+import { navRoutes } from "./layout.definitions";
 
 const { Header, Content, Footer } = Layout;
 interface AppLayoutProps {}
-
-const routeHome = [Route.HOME.toString()];
-
-const navRoutes = [
-  {
-    path: Route.HOME.toString(),
-    name: "HOME",
-  },
-  {
-    path: Route.EXPERIENCE.toString(),
-    name: "EXPERIENCE",
-  },
-  {
-    path: Route.ACHIEVEMENTS.toString(),
-    name: "ACHIEVEMENTS",
-  },
-  {
-    path: Route.ABOUT.toString(),
-    name: "ABOUT",
-  },
-  {
-    path: Route.BLOGS.toString(),
-    name: "BLOGS",
-  },
-  {
-    path: Route.CONTACTS.toString(),
-    name: "CONTACTS",
-  },
-];
 
 const AppLayout: React.FC<PropsWithChildren<AppLayoutProps>> = ({
   children,
@@ -47,7 +20,13 @@ const AppLayout: React.FC<PropsWithChildren<AppLayoutProps>> = ({
     <Layout className={styles.cAppLayout}>
       <Header className={styles.cAppLayout__header}>
         <div className={styles.avatarContainer}>
-          <Avatar>GT</Avatar>
+          <Image
+            src={headIcon}
+            alt="head icon"
+            width={25}
+            height={25}
+            className={styles.avatarContainer__img}
+          />
         </div>
         {navRoutes.map((nav) => {
           return (

@@ -1,0 +1,8 @@
+.cPageTitle {
+  display: flex;
+  justify-content: center;
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+  }
+}
