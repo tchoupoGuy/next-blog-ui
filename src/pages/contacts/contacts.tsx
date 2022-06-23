@@ -8,7 +8,12 @@ const Contacts: React.FC = () => {
       <p>guytchoupo@gmail.com</p>
       <p>+1 438 580 5709</p>
       <p>Montreal,QC</p>
-      <p>https://www.linkedin.com/in/guy-tchoupo</p>
+      <p>
+        {" "}
+        <a href="https://www.linkedin.com/in/guy-tchoupo">
+          https://www.linkedin.com/in/guy-tchoupo
+        </a>
+      </p>
     </section>
   );
 };
