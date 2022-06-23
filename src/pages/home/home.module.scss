@@ -25,4 +25,24 @@
       border-radius: 50%;
     }
   }
+
+  &__iconContainer {
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+
+    .iconContainer {
+      &__color {
+        color: #000;
+      }
+
+      &__color:hover {
+        border: 1px solid #1e76e3;
+        border-radius: 50%;
+        padding: 8px;
+        color: #1e76e3;
+        cursor: pointer;
+      }
+    }
+  }
 }
