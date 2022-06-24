@@ -2,7 +2,7 @@ import { Controller, Mode, useForm } from "react-hook-form";
 import React, { ReactNode, useCallback } from "react";
 
 import Button from "@next/components/button";
-import { useTranslation } from "react-i18next";
+
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import * as yup from "yup";
