@@ -12,7 +12,7 @@ interface Props {
   imgHeight: number;
 }
 
-export const ExperienceContainer: React.FC<PropsWithChildren<Props>> = ({
+const ExperienceContainer: React.FC<PropsWithChildren<Props>> = ({
   imgUrl,
   description,
   subTitle,
@@ -47,3 +47,5 @@ export const ExperienceContainer: React.FC<PropsWithChildren<Props>> = ({
     </>
   );
 };
+
+export default ExperienceContainer;

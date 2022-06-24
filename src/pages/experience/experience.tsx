@@ -1,7 +1,7 @@
 import styles from "./experience.module.scss";
 import React from "react";
 import PageTitle from "@next/components/page-title";
-import { ExperienceContainer } from "./experience-container/experience.container";
+import ExperienceContainer from "./experience-container/experience.container";
 import axyaLogo from "@next/public/assets/img/grad4-network-logo.png";
 import kaayuLogo from "@next/public/assets/img/logo.png";
 
