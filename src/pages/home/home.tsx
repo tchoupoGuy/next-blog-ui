@@ -48,6 +48,7 @@ const HomePage: React.FC = () => {
         </div>
         <div className={styles.cHomePage__imgContainer}>
           <Image
+            alt="profile logo"
             src={profilePicture}
             width={500}
             height={500}

@@ -25,6 +25,7 @@ export const ExperienceContainer: React.FC<PropsWithChildren<Props>> = ({
       <div className={styles.cExperienceContainer}>
         <div className={styles.cExperienceContainer__logo}>
           <Image
+            alt="company logo"
             src={imgUrl}
             width={imgWidth}
             height={imgHeight}
