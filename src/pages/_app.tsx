@@ -7,8 +7,6 @@ import store from "@next/store/configure-store";
 import WithAuth from "@next/modules/authentication/components/with-auth";
 import AppLayout from "@next/components/layout";
 
-const { Header, Content, Footer } = Layout;
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
