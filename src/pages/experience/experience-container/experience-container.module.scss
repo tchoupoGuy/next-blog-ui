@@ -1,0 +1,29 @@
+.cExperienceContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+
+  &__logo {
+    border-radius: 8%;
+
+    transition: box-shadow 0.3s ease-in-out;
+    .img {
+      width: 100%;
+      border-radius: 8%;
+    }
+  }
+  &__logo:hover {
+    border-radius: 8%;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.8);
+  }
+  &__content {
+    margin-left: 24px;
+    .title {
+      font-size: xx-large;
+    }
+    .subtitle {
+      font-size: x-large;
+      font-weight: lighter;
+    }
+  }
+}

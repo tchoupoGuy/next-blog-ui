@@ -9,10 +9,10 @@ const navRoutes = [
     path: Route.EXPERIENCE.toString(),
     name: "EXPERIENCE",
   },
-  {
-    path: Route.ACHIEVEMENTS.toString(),
-    name: "ACHIEVEMENTS",
-  },
+  // {
+  //   path: Route.ACHIEVEMENTS.toString(),
+  //   name: "ACHIEVEMENTS",
+  // },
   {
     path: Route.ABOUT.toString(),
     name: "ABOUT",
