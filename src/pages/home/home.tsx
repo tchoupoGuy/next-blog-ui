@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Avatar, Typography } from "antd";
 import profilePicture from "@next/public/assets/img/profile-picture-two.jpg";
 import { GithubFilled, LinkedinFilled } from "@ant-design/icons";
+import { HomeData } from "@next/scripts/home";
+import { homeData } from "@next/modules/app/home/home.definitions";
 
 const HomePage: React.FC = () => {
   const handleOpenLinkedinProfile = () => {
@@ -17,13 +19,13 @@ const HomePage: React.FC = () => {
       <section className={styles.cHomePage}>
         <div className={styles.cHomePage__textContainer}>
           <Typography.Title level={5} className={styles.helloContainer}>
-            Hello I am
+            {homeData._title}
           </Typography.Title>
           <Typography.Title className={styles.nameContainer}>
-            Guy Tchoupo
+            {homeData.fullName}
           </Typography.Title>
           <Typography.Title level={4} className={styles.jobPositionContainer}>
-            Frontend developer
+            {homeData.position}
           </Typography.Title>
           <div className={styles.cHomePage__iconContainer}>
             <Avatar
@@ -49,7 +51,7 @@ const HomePage: React.FC = () => {
         <div className={styles.cHomePage__imgContainer}>
           <Image
             alt="profile logo"
-            src={profilePicture}
+            src={homeData._imgUrl as string}
             width={500}
             height={500}
             className={styles.profilePicture}
