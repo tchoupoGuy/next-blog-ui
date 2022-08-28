@@ -39,3 +39,15 @@
     background: #fafafa;
   }
 }
+
+.gridContainer {
+  border: solid 4px #000;
+  display: grid;
+  grid-template-columns: 6em 6em 6em 6em;
+  grid-template-rows: 6em 6em;
+  grid-auto-flow: dense;
+}
+
+.gridItem2 {
+  grid-column: 2 / span 2;
+}
