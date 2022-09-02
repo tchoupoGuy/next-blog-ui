@@ -7,18 +7,17 @@ interface Props {
   imgUrl: StaticImageData;
   title: string;
   subTitle: string;
-  description: string;
   imgWidth: number;
   imgHeight: number;
 }
 
 const ExperienceContainer: React.FC<PropsWithChildren<Props>> = ({
   imgUrl,
-  description,
   subTitle,
   title,
   imgHeight,
   imgWidth,
+  children,
 }) => {
   return (
     <>
@@ -39,7 +38,7 @@ const ExperienceContainer: React.FC<PropsWithChildren<Props>> = ({
             {subTitle}
           </Typography.Title>
           <Typography.Paragraph className={styles.description}>
-            {description}
+            {children}
           </Typography.Paragraph>
         </div>
         <Avatar />
