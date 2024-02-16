@@ -16,7 +16,7 @@ const Experience: React.FC = () => {
         imgUrl={intradoLogo}
         title="Software Developer"
         subTitle="full time"
-        description="I worked as a frontend developer at Intrado Life & Safety Canada Inc. In line with the company's expectations, Design, develop and maintain the web version of the 911 emergency service platform"
+        description="I worked as a frontend developer at Intrado Life & Safety Canada Inc. In line with the company's expectations, Design, develop and maintain the web version of the 911 emergency service platform."
       />
       <ExperienceContainer
         imgHeight={380}
