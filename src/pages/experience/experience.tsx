@@ -1,14 +1,23 @@
-import styles from "./experience.module.scss";
-import React from "react";
-import PageTitle from "@next/components/page-title";
-import ExperienceContainer from "./experience-container/experience.container";
-import axyaLogo from "@next/public/assets/img/grad4-network-logo.png";
-import kaayuLogo from "@next/public/assets/img/logo.png";
+import styles from './experience.module.scss';
+import React from 'react';
+import PageTitle from '@next/components/page-title';
+import ExperienceContainer from './experience-container/experience.container';
+import axyaLogo from '@next/public/assets/img/grad4-network-logo.png';
+import kaayuLogo from '@next/public/assets/img/logo.png';
+import intradoLogo from '@next/public/assets/img/intrado-url.png';
 
 const Experience: React.FC = () => {
   return (
     <section className={styles.cExperience}>
       <PageTitle title="Experience" />
+      <ExperienceContainer
+        imgHeight={380}
+        imgWidth={520}
+        imgUrl={intradoLogo}
+        title="Software Developer"
+        subTitle="full time"
+        description="I worked as a frontend developer at Intrado Life & Safety Canada Inc. In line with the company's expectations, Design, develop and maintain the web version of the 911 emergency service platform"
+      />
       <ExperienceContainer
         imgHeight={380}
         imgWidth={520}
