@@ -11,24 +11,24 @@ const Experience: React.FC = () => {
     <section className={styles.cExperience}>
       <PageTitle title="Experience" />
       <ExperienceContainer
-        imgHeight={150}
-        imgWidth={200}
+        imgHeight={intradoLogo.height}
+        imgWidth={intradoLogo.width + 50}
         imgUrl={intradoLogo}
         title="Software Developer"
         subTitle="full time"
         description="I worked as a frontend developer at Intrado Life & Safety Canada Inc. In line with the company's expectations, Design, develop and maintain the web version of the 911 emergency service platform."
       />
       <ExperienceContainer
-        imgHeight={150}
-        imgWidth={200}
+        imgHeight={axyaLogo.height}
+        imgWidth={axyaLogo.width}
         imgUrl={axyaLogo}
         title="React Developer"
         subTitle="full time"
         description="I worked as a frontend developer at Axya inc. In line with the company's expectations, I developed and energized the platform's web pages using JavaScript and the Redux Thunk Middleware. The platform taking volume, I migrated the code written with the Middleware Redux Thunk to Redux Saga and converted the code written with the Javascript language, by the Typescript language, in order to produce a more reliable code allowing to detect bugs before the  compilation."
       />
       <ExperienceContainer
-        imgHeight={150}
-        imgWidth={200}
+        imgHeight={kaayuLogo.height}
+        imgWidth={kaayuLogo.width - 450}
         imgUrl={kaayuLogo}
         title="Full Stack developer"
         subTitle="full time"
