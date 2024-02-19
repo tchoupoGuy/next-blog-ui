@@ -11,16 +11,16 @@ const Experience: React.FC = () => {
     <section className={styles.cExperience}>
       <PageTitle title="Experience" />
       <ExperienceContainer
-        imgHeight={380}
-        imgWidth={520}
+        imgHeight={150}
+        imgWidth={200}
         imgUrl={intradoLogo}
         title="Software Developer"
         subTitle="full time"
         description="I worked as a frontend developer at Intrado Life & Safety Canada Inc. In line with the company's expectations, Design, develop and maintain the web version of the 911 emergency service platform."
       />
       <ExperienceContainer
-        imgHeight={380}
-        imgWidth={520}
+        imgHeight={150}
+        imgWidth={200}
         imgUrl={axyaLogo}
         title="React Developer"
         subTitle="full time"
