@@ -8,7 +8,6 @@ import Image from 'next/image';
 import headIcon from '@next/public/head-icon.png';
 import ActiveLink from '../active-link';
 import { navRoutes } from './layout.definitions';
-import MenuComponent from '../menu-component';
 
 const { Header, Content, Footer } = Layout;
 interface AppLayoutProps {}
@@ -41,7 +40,6 @@ const AppLayout: React.FC<PropsWithChildren<AppLayoutProps>> = ({
             className={styles.avatarContainer__img}
           />
         </div>
-        {/* <MenuComponent items={navRoutes} /> */}
         {navRoutes.map((nav) => {
           return (
             <ActiveLink id={nav.id} key={nav.path} href={nav.path}>
