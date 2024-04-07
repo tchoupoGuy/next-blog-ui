@@ -3,11 +3,12 @@ import React, { PropsWithChildren } from 'react';
 
 import { Avatar, Typography } from 'antd';
 import Image from 'next/image';
+import { DescriptionType } from '../experience.definitions';
 interface Props {
   imgUrl: StaticImageData;
   title: string;
   subTitle: string;
-  descriptions: string[];
+  descriptions: DescriptionType[];
 }
 
 const ExperienceContainer: React.FC<PropsWithChildren<Props>> = ({
@@ -35,9 +36,9 @@ const ExperienceContainer: React.FC<PropsWithChildren<Props>> = ({
             {subTitle}
           </Typography.Title>
           <ul>
-            {descriptions.map((description: string) => {
+            {descriptions.map(({ description, id }: DescriptionType) => {
               return (
-                <li>
+                <li key={id}>
                   <Typography.Paragraph className={styles.description}>
                     {description}
                   </Typography.Paragraph>
