@@ -41,14 +41,14 @@ const AppLayout: React.FC<PropsWithChildren<AppLayoutProps>> = ({
             className={styles.avatarContainer__img}
           />
         </div>
-        <MenuComponent items={navRoutes} />
-        {/* {navRoutes.map((nav) => {
+        {/* <MenuComponent items={navRoutes} /> */}
+        {navRoutes.map((nav) => {
           return (
-            <ActiveLink key={nav.path} href={nav.path}>
+            <ActiveLink id={nav.id} key={nav.path} href={nav.path}>
               {nav.name}
             </ActiveLink>
           );
-        })} */}
+        })}
       </Header>
 
       <Content className={styles.cAppLayout__content}>

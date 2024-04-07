@@ -12,11 +12,6 @@ const ActiveLink: React.FC<PropsWithChildren<ActiveLinkProps>> = ({
   id,
 }) => {
   const router = useRouter();
-  // const style = {
-  //   marginLeft: 16,
-  //   color: router.asPath === href ? "#1e76e3" : "#000",
-  //   fontWeight: "bold",
-  // };
 
   const handleClick = (e: any) => {
     e.preventDefault();
@@ -28,9 +23,9 @@ const ActiveLink: React.FC<PropsWithChildren<ActiveLinkProps>> = ({
       key={id}
       href={href}
       onClick={handleClick}
-      className={`${
+      className={` ${styles.activeLink} ${
         router.asPath ? styles.linkHoverColor : styles.linkBlackColor
-      } ${styles.navigationButton}`}
+      }`}
     >
       {children}
     </a>
