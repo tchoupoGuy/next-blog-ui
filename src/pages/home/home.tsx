@@ -46,7 +46,7 @@ const HomePage: React.FC = () => {
             )}
           </div>
         </div>
-        <div className={styles.cHomePage__imgContainer}>
+        <div  className={styles.cHomePage__imgContainer}>
           <Image
             alt="profile logo"
             src={profilePicture}

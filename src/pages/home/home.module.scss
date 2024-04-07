@@ -24,6 +24,9 @@
     .profilePicture {
       border-radius: 50%;
     }
+    .profilePicture:hover {
+      box-shadow: 0 0px 15px rgba(0, 0, 0, 0.8);
+    }
   }
 
   &__iconContainer {
@@ -44,5 +47,12 @@
         cursor: pointer;
       }
     }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .cHomePage {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }

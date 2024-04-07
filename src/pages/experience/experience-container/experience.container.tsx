@@ -1,15 +1,13 @@
-import styles from "./experience-container.module.scss";
-import React, { PropsWithChildren } from "react";
+import styles from './experience-container.module.scss';
+import React, { PropsWithChildren } from 'react';
 
-import { Avatar, Typography } from "antd";
-import Image from "next/image";
+import { Avatar, Typography } from 'antd';
+import Image from 'next/image';
 interface Props {
   imgUrl: StaticImageData;
   title: string;
   subTitle: string;
   description: string;
-  imgWidth: number;
-  imgHeight: number;
 }
 
 const ExperienceContainer: React.FC<PropsWithChildren<Props>> = ({
@@ -17,18 +15,16 @@ const ExperienceContainer: React.FC<PropsWithChildren<Props>> = ({
   description,
   subTitle,
   title,
-  imgHeight,
-  imgWidth,
 }) => {
   return (
     <>
       <div className={styles.cExperienceContainer}>
         <div className={styles.cExperienceContainer__logo}>
           <Image
-            alt="company logo"
-            src={imgUrl}
-            width={imgWidth}
-            height={imgHeight}
+            alt={`company logo`}
+            src={imgUrl.src}
+            width={imgUrl.width}
+            height={imgUrl.height}
             className={styles.img}
           />
         </div>

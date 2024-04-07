@@ -1,13 +1,14 @@
-import styles from "./app-layout.module.scss";
+import styles from './app-layout.module.scss';
 
-import React, { PropsWithChildren } from "react";
-import { Layout } from "antd";
-import { useRouter } from "next/router";
-import Image from "next/image";
+import React, { PropsWithChildren, useEffect, useRef } from 'react';
+import { Layout } from 'antd';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 
-import headIcon from "@next/public/head-icon.png";
-import ActiveLink from "../active-link";
-import { navRoutes } from "./layout.definitions";
+import headIcon from '@next/public/head-icon.png';
+import ActiveLink from '../active-link';
+import { navRoutes } from './layout.definitions';
+import MenuComponent from '../menu-component';
 
 const { Header, Content, Footer } = Layout;
 interface AppLayoutProps {}
@@ -16,6 +17,18 @@ const AppLayout: React.FC<PropsWithChildren<AppLayoutProps>> = ({
   children,
 }) => {
   const router = useRouter();
+  const ref = useRef<HTMLDivElement | undefined>(undefined);
+
+  useEffect(() => {
+    const div = ref.current;
+    if (div !== undefined) {
+      const { width } = div.getBoundingClientRect();
+      // convert div's children into an array
+      const children = [...div.childNodes];
+
+      const childrenWidths = children.map((child: ChildNode) => {});
+    }
+  }, [ref]);
   return (
     <Layout className={styles.cAppLayout}>
       <Header className={styles.cAppLayout__header}>
@@ -28,13 +41,14 @@ const AppLayout: React.FC<PropsWithChildren<AppLayoutProps>> = ({
             className={styles.avatarContainer__img}
           />
         </div>
-        {navRoutes.map((nav) => {
+        <MenuComponent items={navRoutes} />
+        {/* {navRoutes.map((nav) => {
           return (
             <ActiveLink key={nav.path} href={nav.path}>
               {nav.name}
             </ActiveLink>
           );
-        })}
+        })} */}
       </Header>
 
       <Content className={styles.cAppLayout__content}>

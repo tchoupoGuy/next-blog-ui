@@ -1,4 +1,4 @@
-import { createTypes } from "@next/store/utils";
+import { createTypes } from '@next/store/utils';
 
 export interface RequestState {
   requestSuccess: GenericObject | undefined;

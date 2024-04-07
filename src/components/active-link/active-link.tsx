@@ -1,20 +1,22 @@
-import styles from "./active-link.module.scss";
-import React, { PropsWithChildren } from "react";
-import { useRouter } from "next/router";
+import styles from './active-link.module.scss';
+import React, { PropsWithChildren } from 'react';
+import { useRouter } from 'next/router';
 interface ActiveLinkProps {
   href: string;
+  id: number;
 }
 
 const ActiveLink: React.FC<PropsWithChildren<ActiveLinkProps>> = ({
   children,
   href,
+  id,
 }) => {
   const router = useRouter();
-  const style = {
-    marginLeft: 16,
-    color: router.asPath === href ? "#1e76e3" : "#000",
-    fontWeight: "bold",
-  };
+  // const style = {
+  //   marginLeft: 16,
+  //   color: router.asPath === href ? "#1e76e3" : "#000",
+  //   fontWeight: "bold",
+  // };
 
   const handleClick = (e: any) => {
     e.preventDefault();
@@ -22,7 +24,14 @@ const ActiveLink: React.FC<PropsWithChildren<ActiveLinkProps>> = ({
   };
 
   return (
-    <a href={href} onClick={handleClick} style={style}>
+    <a
+      key={id}
+      href={href}
+      onClick={handleClick}
+      className={`${
+        router.asPath ? styles.linkHoverColor : styles.linkBlackColor
+      } ${styles.navigationButton}`}
+    >
       {children}
     </a>
   );
