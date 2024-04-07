@@ -1,4 +1,3 @@
-import styles from './active-link.module.scss';
 import React, { PropsWithChildren } from 'react';
 import { useRouter } from 'next/router';
 interface ActiveLinkProps {
