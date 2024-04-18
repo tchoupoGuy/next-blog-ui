@@ -1,14 +1,15 @@
-import styles from "./home.module.scss";
-import React from "react";
-import Image from "next/image";
+import styles from './home.module.scss';
+import React from 'react';
+import Image from 'next/image';
 
-import { Avatar, Typography } from "antd";
-import profilePicture from "@next/public/assets/img/profile-picture-two.jpg";
-import { GithubFilled, LinkedinFilled } from "@ant-design/icons";
+import { Avatar, Typography } from 'antd';
+//import profilePicture from '@next/public/assets/img/profile-picture-two.jpg';
+import { GithubFilled, LinkedinFilled } from '@ant-design/icons';
+import { ImgUrls } from '@next/constants/imgUrls';
 
 const HomePage: React.FC = () => {
   const handleOpenLinkedinProfile = () => {
-    window.open("https://www.linkedin.com/in/guy-tchoupo-945560156/", "_blank");
+    window.open('https://www.linkedin.com/in/guy-tchoupo-945560156/', '_blank');
   };
   const HIDE_ICON = false;
 
@@ -46,10 +47,10 @@ const HomePage: React.FC = () => {
             )}
           </div>
         </div>
-        <div  className={styles.cHomePage__imgContainer}>
+        <div className={styles.cHomePage__imgContainer}>
           <Image
             alt="profile logo"
-            src={profilePicture}
+            src={ImgUrls.PROFILE_PICTURE}
             width={500}
             height={500}
             className={styles.profilePicture}

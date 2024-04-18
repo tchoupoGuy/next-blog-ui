@@ -1,1 +1,1 @@
-export { default } from "./achievements";
+export { default } from './[achievements]';

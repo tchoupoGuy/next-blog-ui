@@ -1,9 +1,8 @@
 import styles from './experience-container.module.scss';
 import React, { PropsWithChildren } from 'react';
-
 import { Avatar, Typography } from 'antd';
 import Image from 'next/image';
-import { DescriptionType } from '../experience.definitions';
+import { DescriptionType } from '@next/modules/experiences/experience.definitions';
 interface Props {
   imgUrl: StaticImageData;
   title: string;

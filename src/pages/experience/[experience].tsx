@@ -4,12 +4,12 @@ import PageTitle from '@next/components/page-title';
 import axyaLogo from '@next/public/assets/img/axya-logo.png';
 import kaayuLogo from '@next/public/assets/img/logo.png';
 import intradoLogo from '@next/public/assets/img/intrado-url.png';
-import ExperienceContainer from './experience-container/experience.container';
+import ExperienceContainer from '@next/modules/experiences/experience-container/experience.container';
 import {
   axyaDescritions,
   intradoDescritions,
   kaayuDescritions,
-} from './experience.definitions';
+} from '@next/modules/experiences/experience.definitions';
 
 const Experience: React.FC = () => {
   return (
