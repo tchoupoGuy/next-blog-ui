@@ -1,0 +1,26 @@
+.cMobileMenu {
+  &__menuButton {
+    position: relative;
+    display: block;
+    .activeLink {
+      display: none;
+    }
+  }
+  &__menuButton:hover {
+    .activeLink {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 56%;
+      right: 10%;
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .cMobileMenu {
+    &__menuButton {
+      display: none;
+    }
+  }
+}

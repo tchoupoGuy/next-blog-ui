@@ -1,15 +1,15 @@
-import { Route } from '@next/constants/routes';
+import { Routes } from '@next/constants/routes';
 export type NavRoutesType = { id: number; path: string; name: string };
 
 const navRoutes: NavRoutesType[] = [
   {
     id: 1,
-    path: Route.HOME.toString(),
+    path: Routes.HOME.toString(),
     name: 'HOME',
   },
   {
     id: 2,
-    path: Route.EXPERIENCE.toString(),
+    path: Routes.EXPERIENCE.toString(),
     name: 'EXPERIENCE',
   },
   // {
@@ -18,21 +18,21 @@ const navRoutes: NavRoutesType[] = [
   // },
   {
     id: 3,
-    path: Route.ABOUT.toString(),
+    path: Routes.ABOUT.toString(),
     name: 'ABOUT',
   },
   {
     id: 4,
-    path: Route.BLOGS.toString(),
+    path: Routes.BLOGS.toString(),
     name: 'BLOGS',
   },
   {
     id: 5,
-    path: Route.CONTACTS.toString(),
+    path: Routes.CONTACTS.toString(),
     name: 'CONTACTS',
   },
 ];
 
-const routeHome = [Route.HOME.toString()];
+const routeHome = [Routes.HOME.toString()];
 
 export { navRoutes, routeHome };

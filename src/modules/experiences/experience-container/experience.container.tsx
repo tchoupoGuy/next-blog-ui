@@ -1,5 +1,6 @@
 import styles from './experience-container.module.scss';
 import React, { PropsWithChildren } from 'react';
+
 import { Avatar, Typography } from 'antd';
 import Image from 'next/image';
 import { DescriptionType } from '@next/modules/experiences/experience.definitions';
@@ -20,13 +21,7 @@ const ExperienceContainer: React.FC<PropsWithChildren<Props>> = ({
     <>
       <div className={styles.cExperienceContainer}>
         <div className={styles.cExperienceContainer__logo}>
-          <Image
-            alt={`company logo`}
-            src={imgUrl.src}
-            width={imgUrl.width}
-            height={imgUrl.height}
-            className={styles.img}
-          />
+          <Image alt={`company logo`} src={imgUrl} className={styles.img} />
         </div>
 
         <div className={styles.cExperienceContainer__content}>

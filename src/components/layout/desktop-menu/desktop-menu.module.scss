@@ -1,0 +1,14 @@
+.cDesktopMenu {
+  &__activeLink {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cDesktopMenu {
+    &__activeLink {
+      display: none;
+    }
+  }
+}
