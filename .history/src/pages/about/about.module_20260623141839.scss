@@ -1,0 +1,39 @@
+.cAbout {
+  max-width: 720px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    margin-top: 0.75rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-text-primary);
+
+  strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+}
+
+.skillBadge {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(30, 118, 227, 0.2);
+}
