@@ -1,7 +1,7 @@
-import { StaticImageData } from 'next/image';
 import axyaLogo from '@next/public/assets/img/axya-logo.png';
 import kaayuLogo from '@next/public/assets/img/logo.png';
 import intradoLogo from '@next/public/assets/img/intrado-url.png';
+import { StaticImageData } from "next/image";
 
 export type DescriptionType = {
   id: number;

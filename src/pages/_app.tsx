@@ -9,15 +9,17 @@ import AppLayout from '@next/components/layout';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" href="/head-icon.png" />
-      </Head>
-      <WithAuth>
-        <AppLayout>
-          <Component {...pageProps} />
-        </AppLayout>
-      </WithAuth>
+      <>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="shortcut icon" href="/head-icon.png" />
+        </Head>
+        <WithAuth>
+          <AppLayout>
+            <Component {...pageProps} />
+          </AppLayout>
+        </WithAuth>
+      </>
     </Provider>
   );
 }

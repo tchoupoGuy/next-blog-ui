@@ -1,7 +1,8 @@
 import styles from './experience-container.module.scss';
 import React from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { Typography } from 'antd';
+import { StaticImageData } from "next/image";
 import { DescriptionType } from '@next/modules/experiences/experience.definitions';
 
 interface Props {
